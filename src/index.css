@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@theme {
+  --animate-spotlight: spotlight 2s ease .75s 1 forwards;
+  
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1);
+    }
+  }
+}
+
+/* Custom glow utility */
+.glow-accent {
+  box-shadow: 0 0 25px rgba(173, 255, 47, 0.35);
+}
+
+.glow-subtle {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
